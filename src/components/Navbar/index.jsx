@@ -5,8 +5,10 @@ const Navbar = () => {
   <a href="">Home</a>
   <a href="">Piezas</a>
   <a href="">Combos</a>
-  <img src="" alt="" width="40" height="40"/>
-  
+  <Navlink to='cart' >
+    <CartWidget/>
+  </Navlink>
+
      </nav> );
-};
+}
 export default Navbar;
