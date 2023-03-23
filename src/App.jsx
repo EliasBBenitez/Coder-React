@@ -1,14 +1,15 @@
 import './App.css'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './components/Navbar/ItemListContainer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <Navbar />
-
+    <div>
+      <NavBar/>
+      <ItemListContainer greeting= "Hola, bienvenido a mi tienda en línea!" />
+    </div>
   );
-};
+}
 
 export default App;
+
