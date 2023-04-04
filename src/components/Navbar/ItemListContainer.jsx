@@ -1,12 +1,23 @@
-import React from 'react'
+import { useState, useEffect } from 'react';
 
-export default function ItemListContainer() {
-  return (
-    <div>Las mas pedidas!
-        <ItemList/>
-        
+function ItemListContainer(props) {
+  const [items, setItems] = useState([]);
+  const [filteredItems, setFilteredItems] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
-    
-    </div>
-  )
+  useEffect(() => {
+    const items = [];
+    setItems(items);
+    setFilteredItems(items);
+  }, []);
+
+  useEffect(() => {
+    if (selectedCategory) {
+      const filteredItems = items.filter((item) => item.category === selectedCategory);
+      setFilteredItems(filteredItems);
+    } else {
+      setFilteredItems(items);
+    }
+  }, [items, selectedCategory]);
+
 }
