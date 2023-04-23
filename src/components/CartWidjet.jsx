@@ -1,6 +1,14 @@
+import { useCartContext } from "../context/CartContext";
 import { Badge } from 'react-bootstrap';
 
 export default function CartWidjet() {
+
+
+  const {totalprod} = useCartContext()
+
+
+
+
 
   return (
     <div>
